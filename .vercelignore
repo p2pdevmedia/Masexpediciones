@@ -1,0 +1,13 @@
+node_modules
+.next
+/*.pdf
+/Ezequiel.jpeg
+public/pdfs/*
+!public/pdfs/aconcagua.pdf
+!public/pdfs/avion-de-los-uruguayos.pdf
+!public/pdfs/domuyo.pdf
+!public/pdfs/equipamiento-montana.pdf
+!public/pdfs/lanin.pdf
+!public/pdfs/mocho-villarrica.pdf
+!public/pdfs/puyehue.pdf
+!public/pdfs/san-francisco.pdf
