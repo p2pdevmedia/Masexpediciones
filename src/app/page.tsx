@@ -1,9 +1,14 @@
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ExpeditionCard } from "@/components/ExpeditionCard";
-import { documents, expeditions } from "@/lib/expeditions";
+import { expeditions } from "@/lib/expeditions";
 
 const featured = expeditions.slice(0, 5);
+const clientDocuments = expeditions.slice(0, 3).map((expedition) => ({
+  title: expedition.title,
+  href: expedition.pdf,
+  thumbnail: expedition.thumbnail,
+}));
 
 export default function Home() {
   return (
@@ -69,11 +74,11 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">Antes de viajar</p>
-            <h2>Documentos para clientes</h2>
+            <h2>Fichas para clientes</h2>
           </div>
         </div>
         <div className="document-strip">
-          {documents.map((document) => (
+          {clientDocuments.map((document) => (
             <a key={document.href} href={document.href} target="_blank" rel="noreferrer">
               <img src={document.thumbnail} alt="" />
               <span>

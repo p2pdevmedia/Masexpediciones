@@ -19,7 +19,7 @@ export default function DocumentosPage() {
         <p className="eyebrow">Fichas y preparación</p>
         <h1>Documentos para clientes</h1>
         <p>
-          PDFs importantes para revisar antes de confirmar una salida o preparar el equipo.
+          PDFs importantes para revisar antes de confirmar una salida.
         </p>
       </section>
 

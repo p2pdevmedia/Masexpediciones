@@ -11,48 +11,59 @@ export type Expedition = {
 
 export const expeditions: Expedition[] = [
   {
-    slug: "lanin",
-    title: "Volcán Lanín",
-    region: "Cordillera argentino-chilena",
-    summary:
-      "Una de las cumbres más solicitadas por la agencia. La ficha original queda disponible para revisar itinerario, condiciones y equipo.",
-    audience: "Salida de montaña con cupos a coordinar según experiencia del grupo.",
-    pdf: "/pdfs/lanin.pdf",
-    thumbnail: "/images/lanin.pdf.png",
-    tags: ["Cumbre", "Volcán", "Ficha PDF"],
-  },
-  {
     slug: "domuyo",
     title: "Volcán Domuyo",
     region: "4709 msnm",
     summary:
-      "Programa de ascenso al Domuyo basado en la ficha entregada por Más Expediciones.",
-    audience: "Para montañistas que quieran revisar una propuesta de alta montaña.",
+      "Programa completo al Domuyo con base, cumbre, domos y termas según la ficha vigente.",
+    audience: "Dificultad informada en ficha: media a alta.",
     pdf: "/pdfs/domuyo.pdf",
     thumbnail: "/images/domuyo.pdf.png",
-    tags: ["Cumbre", "Altura", "Ficha PDF"],
+    tags: ["Programa completo", "Media/alta", "Ficha PDF"],
   },
   {
-    slug: "puyehue",
-    title: "Volcán Puyehue",
-    region: "Cordillera argentino-chilena",
+    slug: "puyehue-osorno",
+    title: "Tour Puyehue + Osorno",
+    region: "Chile",
     summary:
-      "Salida volcánica con ficha específica para clientes, preparada como página individual de consulta.",
-    audience: "Itinerario a revisar desde la ficha antes de reservar.",
-    pdf: "/pdfs/puyehue.pdf",
-    thumbnail: "/images/puyehue.pdf.png",
-    tags: ["Volcán", "Travesía", "Ficha PDF"],
+      "Tour de volcanes por Puyehue y Osorno con programa completo y salida desde San Martín de los Andes.",
+    audience: "Dificultad informada en ficha: media / alta.",
+    pdf: "/pdfs/puyehue-osorno.pdf",
+    thumbnail: "/images/puyehue-osorno.pdf.png",
+    tags: ["Tour de volcanes", "Chile", "Media/alta"],
   },
   {
     slug: "mocho-villarrica",
-    title: "Tour de volcanes Mocho-Choshuenco y Villarrica",
-    region: "Cordillera chilena",
+    title: "Tour Mocho-Choshuenco + Villarrica",
+    region: "Chile",
     summary:
-      "Tour de volcanes cargado desde la ficha original de Mocho-Choshuenco y Villarrica.",
-    audience: "Programa por etapas para evaluar con el equipo de guías.",
+      "Tour de volcanes en Chile con Mocho-Choshuenco de 2224 msnm y Villarrica de 2870 msnm.",
+    audience: "Dificultad informada en ficha: media.",
     pdf: "/pdfs/mocho-villarrica.pdf",
     thumbnail: "/images/mocho-villarrica.pdf.png",
-    tags: ["Volcanes", "Chile", "Ficha PDF"],
+    tags: ["Tour de volcanes", "Chile", "Media"],
+  },
+  {
+    slug: "osorno",
+    title: "Volcán Osorno",
+    region: "Chile · 2652 msnm",
+    summary:
+      "Programa 3 días / 2 noches al Volcán Osorno, con cumbre de 2652 msnm según ficha vigente.",
+    audience: "Dificultad informada en ficha: media/alta.",
+    pdf: "/pdfs/osorno.pdf",
+    thumbnail: "/images/osorno.pdf.png",
+    tags: ["3D / 2N", "Chile", "Media/alta"],
+  },
+  {
+    slug: "puyehue-2-noches",
+    title: "Volcán Puyehue · 2 noches",
+    region: "Chile · 2240 msnm",
+    summary:
+      "Programa al Volcán Puyehue con dos noches, traslado, trekking y jornada de cumbre.",
+    audience: "Dificultad informada en ficha: baja a media.",
+    pdf: "/pdfs/puyehue-2-noches.pdf",
+    thumbnail: "/images/puyehue-2-noches.pdf.png",
+    tags: ["2 noches", "Chile", "Baja/media"],
   },
   {
     slug: "aconcagua",
@@ -67,36 +78,34 @@ export const expeditions: Expedition[] = [
   },
   {
     slug: "san-francisco",
-    title: "San Francisco",
-    region: "Cordillera de los Andes",
+    title: "Nevado de San Francisco",
+    region: "6018 msnm",
     summary:
-      "Salida documentada en PDF para revisar detalles del programa junto al equipo de Más Expediciones.",
-    audience: "Consulta recomendada de ficha antes de definir reserva.",
+      "Expedición al Nevado de San Francisco con campamento, comidas, seguros, asistencia y traslados según ficha.",
+    audience: "Salida de alta montaña para revisar en detalle con la ficha vigente.",
     pdf: "/pdfs/san-francisco.pdf",
     thumbnail: "/images/san-francisco.pdf.png",
-    tags: ["Montaña", "Ficha PDF"],
+    tags: ["6018 msnm", "Alta montaña", "Ficha PDF"],
   },
   {
     slug: "avion-de-los-uruguayos",
     title: "Avión de los Uruguayos",
-    region: "Cordillera de los Andes",
+    region: "3600 msnm",
     summary:
-      "Itinerario cargado desde el PDF provisto para presentar esta salida como página independiente.",
-    audience: "Programa especial a coordinar con la agencia.",
+      "Trekking homenaje con alojamiento incluido y jornadas de caminata en la cordillera.",
+    audience: "Programa especial con campamento y desniveles informados en ficha.",
     pdf: "/pdfs/avion-de-los-uruguayos.pdf",
     thumbnail: "/images/avion-de-los-uruguayos.pdf.png",
-    tags: ["Itinerario", "Ficha PDF"],
+    tags: ["Trekking", "3600 msnm", "Ficha PDF"],
   },
 ];
 
-export const documents = [
-  {
-    title: "Equipamiento de montaña",
-    href: "/pdfs/equipamiento-montana.pdf",
-    thumbnail: "/images/equipamiento-montana.pdf.png",
-    description: "Documento base para preparar el equipo antes de viajar.",
-  },
-];
+export const documents: Array<{
+  title: string;
+  href: string;
+  thumbnail: string;
+  description: string;
+}> = [];
 
 export function getExpedition(slug: string) {
   return expeditions.find((expedition) => expedition.slug === slug);
