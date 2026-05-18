@@ -9,13 +9,12 @@ const navItems = [
 export function Header() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Más Expediciones">
-        <span>Más</span>
-        <span>Expediciones</span>
+      <Link className="brand" href="/" aria-label="Más Expediciones" prefetch={true}>
+        Más Expediciones
       </Link>
       <nav className="nav" aria-label="Navegación principal">
         {navItems.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link key={item.href} href={item.href} prefetch={true}>
             {item.label}
           </Link>
         ))}

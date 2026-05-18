@@ -11,17 +11,17 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero__content">
-          <p className="eyebrow">Guías de montaña · San Martín de los Andes y Buenos Aires</p>
+          <p className="eyebrow">Guías de montaña · San Martín de los Andes</p>
           <h1>Más Expediciones</h1>
           <p className="hero__lead">
             Salidas guiadas a lo largo de la cordillera argentina y chilena, con programas para
             quienes empiezan y para montañistas con experiencia.
           </p>
           <div className="hero__actions">
-            <Link className="button button--primary" href="/salidas">
+            <Link className="button button--primary" href="/salidas" prefetch={true}>
               Ver salidas <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link className="button button--ghost" href="/documentos">
+            <Link className="button button--ghost" href="/documentos" prefetch={true}>
               Documentos <Download size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
             <p className="eyebrow">Cumbres solicitadas</p>
             <h2>Salidas destacadas</h2>
           </div>
-          <Link className="text-link" href="/salidas">
+          <Link className="text-link" href="/salidas" prefetch={true}>
             Todas las salidas <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
             Aires: Micaela, Ricardo "El Negro" Calderón y Ezequiel Caporaletti.
           </p>
         </div>
-        <Link className="button button--dark" href="/guias">
+        <Link className="button button--dark" href="/guias" prefetch={true}>
           Ver guías <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </section>

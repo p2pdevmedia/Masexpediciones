@@ -12,6 +12,17 @@ export type Expedition = {
 
 export const expeditions: Expedition[] = [
   {
+    slug: "lanin",
+    title: "Volcán Lanín",
+    region: "3776 msnm",
+    summary:
+      "Ascenso al Volcán Lanín con programa completo y ficha PDF disponible para revisar requisitos y logística.",
+    audience: "Salida principal de alta montaña para revisar en detalle con la ficha vigente.",
+    pdf: "/pdfs/lanin.pdf",
+    thumbnail: "/images/salidas/lanin.jpeg",
+    tags: ["Salida principal", "Alta montaña", "Ficha PDF"],
+  },
+  {
     slug: "domuyo",
     title: "Volcán Domuyo",
     region: "4709 msnm",
@@ -52,7 +63,8 @@ export const expeditions: Expedition[] = [
       "Programa 3 días / 2 noches al Volcán Osorno, con cumbre de 2652 msnm según ficha vigente.",
     audience: "Dificultad informada en ficha: media/alta.",
     pdf: "/pdfs/osorno.pdf",
-    thumbnail: "/images/salidas/tour-de-volcanes.jpeg",
+    thumbnail: "/images/salidas/osorno.jpeg",
+    gallery: ["/images/salidas/osorno.jpeg", "/images/salidas/osorno-2.jpeg"],
     tags: ["3D / 2N", "Chile", "Media/alta"],
   },
   {
@@ -63,7 +75,8 @@ export const expeditions: Expedition[] = [
       "Programa al Volcán Puyehue con dos noches, traslado, trekking y jornada de cumbre.",
     audience: "Dificultad informada en ficha: baja a media.",
     pdf: "/pdfs/puyehue-2-noches.pdf",
-    thumbnail: "/images/salidas/tour-de-volcanes.jpeg",
+    thumbnail: "/images/salidas/puyehue.jpeg",
+    gallery: ["/images/salidas/puyehue.jpeg", "/images/salidas/puyehue-2.jpeg"],
     tags: ["2 noches", "Chile", "Baja/media"],
   },
   {

@@ -1,4 +1,5 @@
 import { ArrowLeft, Download, FileText } from "lucide-react";
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +8,9 @@ import { expeditions, getExpedition } from "@/lib/expeditions";
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+const galleryIntervalSeconds = 5.5;
+const equipmentPdf = "/pdfs/equipamiento-montana.pdf";
 
 export function generateStaticParams() {
   return expeditions.map((expedition) => ({ slug: expedition.slug }));
@@ -34,10 +38,13 @@ export default async function ExpeditionPage({ params }: Props) {
     notFound();
   }
 
+  const images = expedition.gallery ?? [expedition.thumbnail];
+  const hasGallery = images.length > 1;
+
   return (
     <main>
       <section className="detail-hero">
-        <Link className="back-link" href="/salidas">
+        <Link className="back-link" href="/salidas" prefetch={true}>
           <ArrowLeft size={16} aria-hidden="true" />
           Salidas
         </Link>
@@ -52,15 +59,33 @@ export default async function ExpeditionPage({ params }: Props) {
               ))}
             </div>
             <div className="hero__actions">
-              <a className="button button--primary" href={expedition.pdf} target="_blank" rel="noreferrer">
+              <a className="button button--primary" href={expedition.pdf} download>
                 Descargar ficha <Download size={18} aria-hidden="true" />
               </a>
-              <Link className="button button--ghost" href="/documentos">
+              <a className="button button--ghost" href={equipmentPdf} target="_blank" rel="noreferrer">
                 Equipamiento <FileText size={18} aria-hidden="true" />
-              </Link>
+              </a>
             </div>
           </div>
-          <img src={expedition.thumbnail} alt={`Primera página de la ficha ${expedition.title}`} />
+          <div
+            className={hasGallery ? "detail-gallery detail-gallery--slider" : "detail-gallery"}
+            style={
+              {
+                "--gallery-duration": `${images.length * galleryIntervalSeconds}s`,
+                "--gallery-interval": `${galleryIntervalSeconds}s`,
+              } as CSSProperties
+            }
+          >
+            {images.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt={index === 0 ? `Foto de ${expedition.title}` : ""}
+                aria-hidden={index > 0}
+                style={{ "--gallery-index": index } as CSSProperties}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -75,8 +100,8 @@ export default async function ExpeditionPage({ params }: Props) {
             Esta página usa el material entregado para ordenar la consulta. Los datos finos de
             itinerario, requisitos, logística y equipo se mantienen en la ficha PDF original.
           </p>
-          <a className="text-link" href={expedition.pdf} target="_blank" rel="noreferrer">
-            Abrir ficha PDF <Download size={16} aria-hidden="true" />
+          <a className="text-link" href={expedition.pdf} download>
+            Descargar ficha PDF <Download size={16} aria-hidden="true" />
           </a>
         </div>
       </section>

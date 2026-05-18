@@ -12,8 +12,8 @@ export default function SalidasPage() {
         <p className="eyebrow">Itinerarios</p>
         <h1>Salidas de montaña</h1>
         <p>
-          Cada excursión tiene su propia página y la ficha PDF original para consultar detalles sin
-          perder la fuente.
+          Explorá nuestras próximas salidas, revisá los detalles de cada programa y elegí la
+          experiencia de montaña que mejor se adapta a tu momento.
         </p>
       </section>
       <section className="section section--tight">
