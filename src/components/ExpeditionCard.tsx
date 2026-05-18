@@ -1,6 +1,8 @@
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText, MessageCircle } from "lucide-react";
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { getWhatsAppUrl } from "@/lib/contact";
 import type { Expedition } from "@/lib/expeditions";
 
 const galleryTransitions: Record<string, string> = {
@@ -11,6 +13,8 @@ const galleryTransitions: Record<string, string> = {
 };
 
 const galleryIntervalSeconds = 5.5;
+const cardImageSizes =
+  "(max-width: 640px) calc(100vw - 40px), (max-width: 980px) calc((100vw - 64px - 20px) / 2), 380px";
 
 export function ExpeditionCard({ expedition }: { expedition: Expedition }) {
   const images = expedition.gallery ?? [expedition.thumbnail];
@@ -39,11 +43,14 @@ export function ExpeditionCard({ expedition }: { expedition: Expedition }) {
           }
         >
           {images.map((image, index) => (
-            <img
+            <Image
               key={image}
               src={image}
               alt={index === 0 ? `Foto de ${expedition.title}` : ""}
               aria-hidden={index > 0}
+              fill
+              loading="lazy"
+              sizes={cardImageSizes}
               style={{ "--gallery-index": index } as CSSProperties}
             />
           ))}
@@ -66,6 +73,15 @@ export function ExpeditionCard({ expedition }: { expedition: Expedition }) {
         <a className="icon-link" href={expedition.pdf} download>
           <FileText size={16} aria-hidden="true" />
           PDF
+        </a>
+        <a
+          className="whatsapp-link"
+          href={getWhatsAppUrl(expedition.title)}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <MessageCircle size={16} aria-hidden="true" />
+          Quiero subir
         </a>
       </div>
     </article>

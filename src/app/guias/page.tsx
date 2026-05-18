@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { guides } from "@/lib/guides";
 import { buildMetadata } from "@/lib/seo";
 
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildMetadata({
   path: "/guias",
   image: "/images/micaela.jpeg",
 });
+
+const guideProfileImageSizes = "(max-width: 640px) calc(100vw - 40px), 220px";
 
 export default function GuiasPage() {
   return (
@@ -25,7 +28,15 @@ export default function GuiasPage() {
       <section className="guides">
         {guides.map((guide) => (
           <article className="guide-profile" key={guide.name}>
-            <img src={guide.image} alt={guide.alt} />
+            <div className="guide-profile__media">
+              <Image
+                src={guide.image}
+                alt={guide.alt}
+                fill
+                loading="lazy"
+                sizes={guideProfileImageSizes}
+              />
+            </div>
             <div>
               <p className="eyebrow">Equipo de guías</p>
               <h2>{guide.name}</h2>

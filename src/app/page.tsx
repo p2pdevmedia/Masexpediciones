@@ -1,11 +1,14 @@
 import { ArrowRight, Download } from "lucide-react";
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ExpeditionCard } from "@/components/ExpeditionCard";
 import { expeditions } from "@/lib/expeditions";
 import { guides } from "@/lib/guides";
 
 const featured = expeditions;
+const heroImageSizes = "(max-width: 980px) calc(100vw - 40px), 50vw";
+
 export default function Home() {
   return (
     <main>
@@ -33,7 +36,15 @@ export default function Home() {
               key={guide.name}
               style={{ "--slide-index": index } as CSSProperties}
             >
-              <img src={guide.image} alt={guide.alt} />
+              <Image
+                src={guide.image}
+                alt={guide.alt}
+                fill
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : undefined}
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes={heroImageSizes}
+              />
               <figcaption>
                 <strong>{guide.name}</strong>
                 <span>Equipo de guías</span>

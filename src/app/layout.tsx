@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { buildMetadata, defaultTitle, organizationJsonLd, siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

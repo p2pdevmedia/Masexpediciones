@@ -185,6 +185,11 @@ p {
   color: white;
 }
 
+.button--whatsapp {
+  background: #1f7a4d;
+  color: white;
+}
+
 .hero__visual {
   align-self: center;
   background: var(--night);
@@ -487,7 +492,8 @@ p {
 }
 
 .text-link,
-.icon-link {
+.icon-link,
+.whatsapp-link {
   align-items: center;
   background: none;
   border: 0;
@@ -502,6 +508,55 @@ p {
 
 .icon-link {
   color: var(--rust);
+}
+
+.whatsapp-link {
+  color: #1f7a4d;
+}
+
+.site-footer {
+  align-items: center;
+  background: var(--night);
+  color: white;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 34px 32px;
+}
+
+.site-footer__brand {
+  max-width: 460px;
+}
+
+.site-footer__brand img {
+  filter: brightness(0) invert(1);
+  height: 54px;
+  object-fit: contain;
+  object-position: left center;
+  width: 170px;
+}
+
+.site-footer__brand p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 12px 0 0;
+}
+
+.site-footer__contact {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-footer__contact a {
+  align-items: center;
+  color: white;
+  display: inline-flex;
+  font-weight: 850;
+  gap: 10px;
 }
 
 .band {
@@ -646,9 +701,15 @@ p {
   overflow: hidden;
 }
 
-.guide-profile img {
+.guide-profile__media {
   aspect-ratio: 1;
+  align-self: stretch;
   height: 100%;
+  min-height: 220px;
+  position: relative;
+}
+
+.guide-profile__media img {
   object-fit: cover;
   width: 100%;
 }
@@ -737,9 +798,14 @@ p {
   }
 
   .band,
-  .section-heading {
+  .section-heading,
+  .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .site-footer__contact {
+    align-items: flex-start;
   }
 }
 
@@ -763,6 +829,7 @@ p {
   .detail-hero,
   .band,
   .guides,
+  .site-footer,
   .not-found {
     padding-left: 20px;
     padding-right: 20px;

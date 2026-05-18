@@ -1,8 +1,10 @@
-import { ArrowLeft, Download, FileText } from "lucide-react";
+import { ArrowLeft, Download, FileText, MessageCircle } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getWhatsAppUrl } from "@/lib/contact";
 import { expeditions, getExpedition } from "@/lib/expeditions";
 import { expeditionJsonLd, expeditionMetadata } from "@/lib/seo";
 
@@ -12,6 +14,7 @@ type Props = {
 
 const galleryIntervalSeconds = 5.5;
 const equipmentPdf = "/pdfs/equipamiento-montana.pdf";
+const detailImageSizes = "(max-width: 980px) calc(100vw - 40px), 50vw";
 
 export function generateStaticParams() {
   return expeditions.map((expedition) => ({ slug: expedition.slug }));
@@ -67,6 +70,14 @@ export default async function ExpeditionPage({ params }: Props) {
               <a className="button button--ghost" href={equipmentPdf} download>
                 Descargar equipamiento <FileText size={18} aria-hidden="true" />
               </a>
+              <a
+                className="button button--whatsapp"
+                href={getWhatsAppUrl(expedition.title)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Quiero subir <MessageCircle size={18} aria-hidden="true" />
+              </a>
             </div>
           </div>
           <div
@@ -79,11 +90,15 @@ export default async function ExpeditionPage({ params }: Props) {
             }
           >
             {images.map((image, index) => (
-              <img
+              <Image
                 key={image}
                 src={image}
                 alt={index === 0 ? `Foto de ${expedition.title}` : ""}
                 aria-hidden={index > 0}
+                fill
+                priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes={detailImageSizes}
                 style={{ "--gallery-index": index } as CSSProperties}
               />
             ))}
