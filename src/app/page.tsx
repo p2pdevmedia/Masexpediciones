@@ -66,7 +66,7 @@ export default function Home() {
           <h2>Equipo de guías</h2>
           <p>
             La agencia está conformada por dos guías de San Martín de los Andes y uno de Buenos
-            Aires: Micaela, Ricardo "El Negro" Calderón y Ezequiel Caporaletti.
+            Aires: Micaela Insua, Ricardo "El Negro" Calderón y Ezequiel Caporaletti.
           </p>
         </div>
         <Link className="button button--dark" href="/guias" prefetch={true}>

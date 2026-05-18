@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Más Expediciones | Guías de montaña",
   description:
     "Agencia de guías de montaña con salidas por la cordillera argentina y chilena.",
+  icons: {
+    icon: [{ url: "/masexpediciones.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

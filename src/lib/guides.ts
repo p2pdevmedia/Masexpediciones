@@ -1,8 +1,8 @@
 export const guides = [
   {
-    name: "Micaela",
+    name: "Micaela Insua",
     image: "/images/micaela.jpeg",
-    alt: "Micaela, guía de Más Expediciones",
+    alt: "Micaela Insua, guía de Más Expediciones",
     description:
       "Parte del equipo de guías de Más Expediciones para salidas de montaña en la cordillera argentina y chilena.",
   },

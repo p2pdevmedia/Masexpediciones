@@ -52,10 +52,17 @@ img {
 }
 
 .brand {
-  color: var(--ink);
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0;
+  display: inline-flex;
+  height: 52px;
+  overflow: hidden;
+  width: 156px;
+}
+
+.brand img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .nav {

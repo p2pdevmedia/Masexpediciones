@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Más Expediciones" prefetch={true}>
-        Más Expediciones
+        <img src="/masexpediciones.svg" alt="" />
       </Link>
       <nav className="nav" aria-label="Navegación principal">
         {navItems.map((item) => (
