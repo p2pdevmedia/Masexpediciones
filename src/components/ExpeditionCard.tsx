@@ -1,12 +1,33 @@
 import { ArrowRight, FileText } from "lucide-react";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { Expedition } from "@/lib/expeditions";
 
 export function ExpeditionCard({ expedition }: { expedition: Expedition }) {
+  const images = expedition.gallery ?? [expedition.thumbnail];
+  const hasGallery = images.length > 1;
+
   return (
     <article className="expedition-card">
       <Link href={`/salidas/${expedition.slug}`} aria-label={`Ver ${expedition.title}`}>
-        <img src={expedition.thumbnail} alt={`Ficha de ${expedition.title}`} />
+        <div
+          className={
+            hasGallery
+              ? "expedition-card__media expedition-card__media--gallery"
+              : "expedition-card__media"
+          }
+          style={{ "--gallery-duration": `${images.length * 4}s` } as CSSProperties}
+        >
+          {images.map((image, index) => (
+            <img
+              key={image}
+              src={image}
+              alt={index === 0 ? `Foto de ${expedition.title}` : ""}
+              aria-hidden={index > 0}
+              style={{ "--gallery-index": index } as CSSProperties}
+            />
+          ))}
+        </div>
       </Link>
       <div className="expedition-card__body">
         <div className="eyebrow">{expedition.region}</div>

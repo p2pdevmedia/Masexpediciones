@@ -1,15 +1,11 @@
-import { ArrowRight, Download, MapPin } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { ExpeditionCard } from "@/components/ExpeditionCard";
 import { expeditions } from "@/lib/expeditions";
+import { guides } from "@/lib/guides";
 
-const featured = expeditions.slice(0, 5);
-const clientDocuments = expeditions.slice(0, 3).map((expedition) => ({
-  title: expedition.title,
-  href: expedition.pdf,
-  thumbnail: expedition.thumbnail,
-}));
-
+const featured = expeditions;
 export default function Home() {
   return (
     <main>
@@ -30,12 +26,20 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="hero__visual" aria-label="Guía de Más Expediciones">
-          <img src="/images/ezequiel.jpeg" alt="Ezequiel Caporaletti, guía de montaña" />
-          <div>
-            <strong>Ezequiel Caporaletti</strong>
-            <span>Guía de cabecera</span>
-          </div>
+        <div className="hero__visual hero-slider" aria-label="Equipo de guías de Más Expediciones">
+          {guides.map((guide, index) => (
+            <figure
+              className="hero-slider__slide"
+              key={guide.name}
+              style={{ "--slide-index": index } as CSSProperties}
+            >
+              <img src={guide.image} alt={guide.alt} />
+              <figcaption>
+                <strong>{guide.name}</strong>
+                <span>Equipo de guías</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -59,35 +63,15 @@ export default function Home() {
       <section className="band">
         <div>
           <p className="eyebrow">Equipo</p>
-          <h2>Guías de cabecera</h2>
+          <h2>Equipo de guías</h2>
           <p>
             La agencia está conformada por dos guías de San Martín de los Andes y uno de Buenos
-            Aires. Los guías de cabecera informados son Ezequiel Caporaletti y Ricardo Calderón.
+            Aires: Micaela, Ricardo "El Negro" Calderón y Ezequiel Caporaletti.
           </p>
         </div>
         <Link className="button button--dark" href="/guias">
           Ver guías <ArrowRight size={18} aria-hidden="true" />
         </Link>
-      </section>
-
-      <section className="section">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Antes de viajar</p>
-            <h2>Fichas para clientes</h2>
-          </div>
-        </div>
-        <div className="document-strip">
-          {clientDocuments.map((document) => (
-            <a key={document.href} href={document.href} target="_blank" rel="noreferrer">
-              <img src={document.thumbnail} alt="" />
-              <span>
-                <MapPin size={16} aria-hidden="true" />
-                {document.title}
-              </span>
-            </a>
-          ))}
-        </div>
       </section>
     </main>
   );

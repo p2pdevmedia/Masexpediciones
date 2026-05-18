@@ -6,6 +6,7 @@ export type Expedition = {
   audience: string;
   pdf: string;
   thumbnail: string;
+  gallery?: string[];
   tags: string[];
 };
 
@@ -18,7 +19,7 @@ export const expeditions: Expedition[] = [
       "Programa completo al Domuyo con base, cumbre, domos y termas según la ficha vigente.",
     audience: "Dificultad informada en ficha: media a alta.",
     pdf: "/pdfs/domuyo.pdf",
-    thumbnail: "/images/domuyo.pdf.png",
+    thumbnail: "/images/salidas/domuyo.jpeg",
     tags: ["Programa completo", "Media/alta", "Ficha PDF"],
   },
   {
@@ -29,7 +30,7 @@ export const expeditions: Expedition[] = [
       "Tour de volcanes por Puyehue y Osorno con programa completo y salida desde San Martín de los Andes.",
     audience: "Dificultad informada en ficha: media / alta.",
     pdf: "/pdfs/puyehue-osorno.pdf",
-    thumbnail: "/images/puyehue-osorno.pdf.png",
+    thumbnail: "/images/salidas/tour-de-volcanes.jpeg",
     tags: ["Tour de volcanes", "Chile", "Media/alta"],
   },
   {
@@ -40,7 +41,7 @@ export const expeditions: Expedition[] = [
       "Tour de volcanes en Chile con Mocho-Choshuenco de 2224 msnm y Villarrica de 2870 msnm.",
     audience: "Dificultad informada en ficha: media.",
     pdf: "/pdfs/mocho-villarrica.pdf",
-    thumbnail: "/images/mocho-villarrica.pdf.png",
+    thumbnail: "/images/salidas/mocho-choshuenco.jpeg",
     tags: ["Tour de volcanes", "Chile", "Media"],
   },
   {
@@ -51,7 +52,7 @@ export const expeditions: Expedition[] = [
       "Programa 3 días / 2 noches al Volcán Osorno, con cumbre de 2652 msnm según ficha vigente.",
     audience: "Dificultad informada en ficha: media/alta.",
     pdf: "/pdfs/osorno.pdf",
-    thumbnail: "/images/osorno.pdf.png",
+    thumbnail: "/images/salidas/tour-de-volcanes.jpeg",
     tags: ["3D / 2N", "Chile", "Media/alta"],
   },
   {
@@ -62,7 +63,7 @@ export const expeditions: Expedition[] = [
       "Programa al Volcán Puyehue con dos noches, traslado, trekking y jornada de cumbre.",
     audience: "Dificultad informada en ficha: baja a media.",
     pdf: "/pdfs/puyehue-2-noches.pdf",
-    thumbnail: "/images/puyehue-2-noches.pdf.png",
+    thumbnail: "/images/salidas/tour-de-volcanes.jpeg",
     tags: ["2 noches", "Chile", "Baja/media"],
   },
   {
@@ -73,7 +74,7 @@ export const expeditions: Expedition[] = [
       "Propuesta de expedición a Aconcagua con ficha completa disponible para clientes.",
     audience: "Orientada a montañistas que buscan una expedición mayor.",
     pdf: "/pdfs/aconcagua.pdf",
-    thumbnail: "/images/aconcagua.pdf.png",
+    thumbnail: "/images/salidas/aconcagua.jpeg",
     tags: ["Expedición", "Alta montaña", "Ficha PDF"],
   },
   {
@@ -84,7 +85,11 @@ export const expeditions: Expedition[] = [
       "Expedición al Nevado de San Francisco con campamento, comidas, seguros, asistencia y traslados según ficha.",
     audience: "Salida de alta montaña para revisar en detalle con la ficha vigente.",
     pdf: "/pdfs/san-francisco.pdf",
-    thumbnail: "/images/san-francisco.pdf.png",
+    thumbnail: "/images/salidas/san-francisco-catamarca.jpeg",
+    gallery: [
+      "/images/salidas/san-francisco-catamarca.jpeg",
+      "/images/salidas/san-francisco-catamarca-2.jpeg",
+    ],
     tags: ["6018 msnm", "Alta montaña", "Ficha PDF"],
   },
   {
@@ -95,7 +100,8 @@ export const expeditions: Expedition[] = [
       "Trekking homenaje con alojamiento incluido y jornadas de caminata en la cordillera.",
     audience: "Programa especial con campamento y desniveles informados en ficha.",
     pdf: "/pdfs/avion-de-los-uruguayos.pdf",
-    thumbnail: "/images/avion-de-los-uruguayos.pdf.png",
+    thumbnail: "/images/salidas/avion-uruguayos.jpeg",
+    gallery: ["/images/salidas/avion-uruguayos.jpeg", "/images/salidas/avion-uruguayos-2.jpeg"],
     tags: ["Trekking", "3600 msnm", "Ficha PDF"],
   },
 ];

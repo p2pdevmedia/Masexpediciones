@@ -198,7 +198,24 @@ p {
   width: 100%;
 }
 
-.hero__visual div {
+.hero-slider__slide {
+  animation: guide-slide 18s infinite;
+  animation-delay: calc(var(--slide-index) * 6s);
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.hero-slider__slide:first-child {
+  opacity: 1;
+}
+
+.hero-slider__slide img {
+  transform: scale(1.02);
+}
+
+.hero-slider__slide figcaption {
   background: linear-gradient(180deg, transparent, rgba(16, 23, 21, 0.88));
   bottom: 0;
   color: white;
@@ -213,6 +230,33 @@ p {
 
 .hero__visual span {
   color: rgba(255, 255, 255, 0.76);
+}
+
+@keyframes guide-slide {
+  0%,
+  4%,
+  30% {
+    opacity: 1;
+  }
+
+  36%,
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider__slide {
+    animation: none;
+  }
+
+  .hero-slider__slide:not(:first-child) {
+    opacity: 0;
+  }
 }
 
 .section {
@@ -252,11 +296,59 @@ p {
   overflow: hidden;
 }
 
-.expedition-card img {
+.expedition-card > a {
+  display: block;
+}
+
+.expedition-card__media {
   aspect-ratio: 4 / 3;
   background: var(--ice);
-  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.expedition-card__media img {
+  height: 100%;
+  object-fit: cover;
   width: 100%;
+}
+
+.expedition-card__media--gallery img {
+  animation: expedition-gallery var(--gallery-duration) infinite;
+  animation-delay: calc(var(--gallery-index) * 4s);
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.expedition-card__media--gallery img:first-child {
+  opacity: 1;
+}
+
+@keyframes expedition-gallery {
+  0%,
+  42% {
+    opacity: 1;
+  }
+
+  50%,
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expedition-card__media--gallery img {
+    animation: none;
+  }
+
+  .expedition-card__media--gallery img:not(:first-child) {
+    opacity: 0;
+  }
 }
 
 .expedition-card__body {
