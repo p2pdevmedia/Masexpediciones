@@ -157,8 +157,11 @@ p {
 
 .button {
   align-items: center;
+  border: 0;
   border-radius: 999px;
+  cursor: pointer;
   display: inline-flex;
+  font: inherit;
   font-weight: 800;
   gap: 10px;
   justify-content: center;
@@ -172,6 +175,7 @@ p {
 }
 
 .button--ghost {
+  background: transparent;
   border: 1px solid var(--line);
   color: var(--ink);
 }
@@ -296,7 +300,7 @@ p {
   overflow: hidden;
 }
 
-.expedition-card > a {
+.expedition-card__main {
   display: block;
 }
 
@@ -453,7 +457,12 @@ p {
 }
 
 .expedition-card__body {
-  padding: 22px;
+  padding: 22px 22px 0;
+}
+
+.expedition-card__actions {
+  margin-top: 28px;
+  padding: 0 22px 22px;
 }
 
 .expedition-card p {
@@ -480,81 +489,19 @@ p {
 .text-link,
 .icon-link {
   align-items: center;
+  background: none;
+  border: 0;
   color: var(--forest);
+  cursor: pointer;
   display: inline-flex;
   font: inherit;
   font-weight: 850;
   gap: 8px;
-}
-
-.icon-link {
-  background: none;
-  border: 0;
-  color: var(--rust);
-  cursor: pointer;
   padding: 0;
 }
 
-.pdf-modal {
-  align-items: center;
-  background: rgba(16, 23, 21, 0.72);
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  padding: 24px;
-  position: fixed;
-  z-index: 60;
-}
-
-.pdf-modal__dialog {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  height: min(86vh, 920px);
-  max-width: 1040px;
-  overflow: hidden;
-  width: min(100%, 1040px);
-}
-
-.pdf-modal__header {
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  gap: 18px;
-  justify-content: space-between;
-  padding: 18px 20px;
-}
-
-.pdf-modal__header .eyebrow,
-.pdf-modal__header h2 {
-  margin-bottom: 0;
-}
-
-.pdf-modal__header h2 {
-  font-size: clamp(24px, 3vw, 38px);
-}
-
-.pdf-modal__close {
-  align-items: center;
-  background: var(--night);
-  border: 0;
-  border-radius: 999px;
-  color: white;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 0 0 auto;
-  height: 42px;
-  justify-content: center;
-  width: 42px;
-}
-
-.pdf-modal iframe {
-  border: 0;
-  height: 100%;
-  width: 100%;
+.icon-link {
+  color: var(--rust);
 }
 
 .band {
@@ -675,6 +622,10 @@ p {
 .plain-panel {
   border-left: 3px solid var(--rust);
   padding-left: 24px;
+}
+
+.plain-panel .text-link {
+  margin: 8px 16px 0 0;
 }
 
 .guides {

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { expeditions, getExpedition } from "@/lib/expeditions";
+import { expeditionJsonLd, expeditionMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -24,10 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  return {
-    title: `${expedition.title} | Más Expediciones`,
-    description: expedition.summary,
-  };
+  return expeditionMetadata(expedition);
 }
 
 export default async function ExpeditionPage({ params }: Props) {
@@ -43,6 +41,10 @@ export default async function ExpeditionPage({ params }: Props) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(expeditionJsonLd(expedition)) }}
+      />
       <section className="detail-hero">
         <Link className="back-link" href="/salidas" prefetch={true}>
           <ArrowLeft size={16} aria-hidden="true" />
@@ -60,10 +62,10 @@ export default async function ExpeditionPage({ params }: Props) {
             </div>
             <div className="hero__actions">
               <a className="button button--primary" href={expedition.pdf} download>
-                Descargar ficha <Download size={18} aria-hidden="true" />
+                Descargar ficha técnica <Download size={18} aria-hidden="true" />
               </a>
-              <a className="button button--ghost" href={equipmentPdf} target="_blank" rel="noreferrer">
-                Equipamiento <FileText size={18} aria-hidden="true" />
+              <a className="button button--ghost" href={equipmentPdf} download>
+                Descargar equipamiento <FileText size={18} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -101,7 +103,10 @@ export default async function ExpeditionPage({ params }: Props) {
             itinerario, requisitos, logística y equipo se mantienen en la ficha PDF original.
           </p>
           <a className="text-link" href={expedition.pdf} download>
-            Descargar ficha PDF <Download size={16} aria-hidden="true" />
+            Descargar ficha técnica <Download size={16} aria-hidden="true" />
+          </a>
+          <a className="text-link" href={equipmentPdf} download>
+            Descargar equipamiento <FileText size={16} aria-hidden="true" />
           </a>
         </div>
       </section>

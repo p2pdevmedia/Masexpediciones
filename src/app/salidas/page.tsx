@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { ExpeditionCard } from "@/components/ExpeditionCard";
 import { expeditions } from "@/lib/expeditions";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Salidas | Más Expediciones",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Salidas de montaña | Más Expediciones",
+  description:
+    "Programas guiados de trekking, volcanes y alta montaña en Argentina y Chile, con fichas técnicas para preparar cada salida.",
+  path: "/salidas",
+  image: "/images/salidas/lanin.jpeg",
+});
 
 export default function SalidasPage() {
   return (

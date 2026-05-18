@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { guides } from "@/lib/guides";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Guías | Más Expediciones",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Guías de montaña | Más Expediciones",
+  description:
+    "Conocé al equipo de guías de Más Expediciones para salidas de montaña en San Martín de los Andes, Patagonia, Argentina y Chile.",
+  path: "/guias",
+  image: "/images/micaela.jpeg",
+});
 
 export default function GuiasPage() {
   return (

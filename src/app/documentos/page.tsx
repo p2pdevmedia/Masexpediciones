@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { Download } from "lucide-react";
 import { documents, expeditions } from "@/lib/expeditions";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Documentos | Más Expediciones",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Documentos y fichas técnicas | Más Expediciones",
+  description:
+    "Fichas técnicas, documentos de preparación y PDFs de equipamiento para salidas guiadas de montaña con Más Expediciones.",
+  path: "/documentos",
+  image: "/images/salidas/lanin.jpeg",
+});
 
 export default function DocumentosPage() {
   const expeditionDocs = expeditions.map((expedition) => ({

@@ -1,0 +1,97 @@
+# Mas Expediciones
+
+Mas Expediciones es una agencia de guias de montana de San Martin de los Andes. Organiza salidas guiadas, trekkings, ascensos y expediciones en la cordillera argentina y chilena, con programas para personas que empiezan y para montanistas con experiencia.
+
+Sitio principal: https://masexpediciones.com/
+
+## Navegacion principal
+
+- Inicio: https://masexpediciones.com/
+- Salidas: https://masexpediciones.com/salidas
+- Guias: https://masexpediciones.com/guias
+- Documentos: https://masexpediciones.com/documentos
+- Sitemap: https://masexpediciones.com/sitemap.xml
+
+## Equipo
+
+Mas Expediciones esta conformada por guias de San Martin de los Andes y Buenos Aires. El equipo publicado en el sitio incluye a Micaela Insua, Ricardo "El Negro" Calderon y Ezequiel Caporaletti.
+
+Pagina del equipo: https://masexpediciones.com/guias
+
+## Salidas y expediciones
+
+### Volcan Lanin
+
+- URL: https://masexpediciones.com/salidas/lanin
+- Region/altura: 3776 msnm
+- Resumen: ascenso al Volcan Lanin con programa completo y ficha PDF disponible para revisar requisitos y logistica.
+- PDF: https://masexpediciones.com/pdfs/lanin.pdf
+
+### Volcan Domuyo
+
+- URL: https://masexpediciones.com/salidas/domuyo
+- Region/altura: 4709 msnm
+- Resumen: programa completo al Domuyo con base, cumbre, domos y termas segun la ficha vigente.
+- PDF: https://masexpediciones.com/pdfs/domuyo.pdf
+
+### Tour Puyehue + Osorno
+
+- URL: https://masexpediciones.com/salidas/puyehue-osorno
+- Region: Chile
+- Resumen: tour de volcanes por Puyehue y Osorno con programa completo y salida desde San Martin de los Andes.
+- PDF: https://masexpediciones.com/pdfs/puyehue-osorno.pdf
+
+### Tour Mocho-Choshuenco + Villarrica
+
+- URL: https://masexpediciones.com/salidas/mocho-villarrica
+- Region: Chile
+- Resumen: tour de volcanes en Chile con Mocho-Choshuenco de 2224 msnm y Villarrica de 2870 msnm.
+- PDF: https://masexpediciones.com/pdfs/mocho-villarrica.pdf
+
+### Volcan Osorno
+
+- URL: https://masexpediciones.com/salidas/osorno
+- Region/altura: Chile, 2652 msnm
+- Resumen: programa 3 dias / 2 noches al Volcan Osorno, con cumbre de 2652 msnm segun ficha vigente.
+- PDF: https://masexpediciones.com/pdfs/osorno.pdf
+
+### Volcan Puyehue, 2 noches
+
+- URL: https://masexpediciones.com/salidas/puyehue-2-noches
+- Region/altura: Chile, 2240 msnm
+- Resumen: programa al Volcan Puyehue con dos noches, traslado, trekking y jornada de cumbre.
+- PDF: https://masexpediciones.com/pdfs/puyehue-2-noches.pdf
+
+### Aconcagua
+
+- URL: https://masexpediciones.com/salidas/aconcagua
+- Region: Cordillera de los Andes
+- Resumen: propuesta de expedicion a Aconcagua con ficha completa disponible para clientes.
+- PDF: https://masexpediciones.com/pdfs/aconcagua.pdf
+
+### Nevado de San Francisco
+
+- URL: https://masexpediciones.com/salidas/san-francisco
+- Region/altura: 6018 msnm
+- Resumen: expedicion al Nevado de San Francisco con campamento, comidas, seguros, asistencia y traslados segun ficha.
+- PDF: https://masexpediciones.com/pdfs/san-francisco.pdf
+
+### Avion de los Uruguayos
+
+- URL: https://masexpediciones.com/salidas/avion-de-los-uruguayos
+- Region/altura: 3600 msnm
+- Resumen: trekking homenaje con alojamiento incluido y jornadas de caminata en la cordillera.
+- PDF: https://masexpediciones.com/pdfs/avion-de-los-uruguayos.pdf
+
+## Documentos
+
+- Pagina de documentos: https://masexpediciones.com/documentos
+- Equipamiento de montana: https://masexpediciones.com/pdfs/equipamiento-montana.pdf
+
+## Palabras clave descriptivas
+
+Guias de montana, San Martin de los Andes, Patagonia, trekking, alta montana, expediciones guiadas, Volcan Lanin, Aconcagua, Volcan Domuyo, Volcan Osorno, Volcan Puyehue, Nevado de San Francisco, cordillera argentina, cordillera chilena.
+
+## Politica de interpretacion
+
+La informacion publicada ordena la consulta inicial. Los detalles finos de itinerario, requisitos, dificultad, logistica, seguros, comidas, traslados, equipamiento y condiciones comerciales deben confirmarse en las fichas PDF vigentes o directamente con Mas Expediciones.

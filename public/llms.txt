@@ -1,0 +1,33 @@
+# Mas Expediciones
+
+> Guias de montana de San Martin de los Andes con salidas guiadas, trekking y expediciones en la cordillera argentina y chilena.
+
+Mas Expediciones organiza programas de montana para personas que empiezan y para montanistas con experiencia. El sitio publica salidas, fichas tecnicas PDF, documentos de equipamiento y el equipo de guias.
+
+## Sitio
+
+- [Inicio](https://masexpediciones.com/): presentacion general de Mas Expediciones.
+- [Salidas de montana](https://masexpediciones.com/salidas): listado de expediciones y trekkings disponibles.
+- [Guias](https://masexpediciones.com/guias): equipo de guias de Mas Expediciones.
+- [Documentos](https://masexpediciones.com/documentos): fichas tecnicas PDF y documentos de preparacion.
+- [Sitemap XML](https://masexpediciones.com/sitemap.xml): mapa completo de URLs publicas.
+
+## Salidas principales
+
+- [Volcan Lanin](https://masexpediciones.com/salidas/lanin): ascenso al Volcan Lanin, 3776 msnm.
+- [Volcan Domuyo](https://masexpediciones.com/salidas/domuyo): programa al Domuyo, 4709 msnm.
+- [Tour Puyehue + Osorno](https://masexpediciones.com/salidas/puyehue-osorno): tour de volcanes en Chile.
+- [Tour Mocho-Choshuenco + Villarrica](https://masexpediciones.com/salidas/mocho-villarrica): tour de volcanes en Chile.
+- [Volcan Osorno](https://masexpediciones.com/salidas/osorno): programa 3 dias / 2 noches al Volcan Osorno.
+- [Volcan Puyehue, 2 noches](https://masexpediciones.com/salidas/puyehue-2-noches): trekking y cumbre del Volcan Puyehue.
+- [Aconcagua](https://masexpediciones.com/salidas/aconcagua): propuesta de expedicion a Aconcagua.
+- [Nevado de San Francisco](https://masexpediciones.com/salidas/san-francisco): expedicion al Nevado de San Francisco, 6018 msnm.
+- [Avion de los Uruguayos](https://masexpediciones.com/salidas/avion-de-los-uruguayos): trekking homenaje en la cordillera.
+
+## Mas contexto para LLMs
+
+- [Version extendida](https://masexpediciones.com/llms-full.txt): resumen ampliado del sitio, salidas y documentos.
+
+## Notas de uso
+
+La informacion fina de itinerario, requisitos, logistica y equipo esta en las fichas PDF originales de cada salida. Para datos comerciales vigentes, disponibilidad y condiciones finales, se debe consultar directamente a Mas Expediciones.
